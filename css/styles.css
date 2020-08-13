@@ -115,7 +115,7 @@ span.accent {
 .site-nav .item {
   position: relative;
 }
-.item.current::after {
+.link.current::after {
   content: "";
   position: absolute;
   top: 45.2px;
