@@ -194,6 +194,14 @@ span.accent {
 
   color: var(--white-color);
   background-color: var(--accent-color);
+  transition: color var(--transition-duration) cubic-bezier(0.4, 0, 0.2, 1),
+    background-color var(--transition-duration) cubic-bezier(0.4, 0, 0.2, 1);
+}
+.button-main:hover,
+.button-main:focus {
+  cursor: pointer;
+  color: var(--accent-color);
+  background-color: var(--background-color-main);
 }
 
 /* Секции*/
@@ -488,6 +496,7 @@ footer {
   background-color: var(--background-color-second);
   border: transparent;
   border-radius: 4px;
+  cursor: pointer;
   transition: background-color var(--transition-duration)
       cubic-bezier(0.4, 0, 0.2, 1),
     color var(--transition-duration) cubic-bezier(0.4, 0, 0.2, 1);
@@ -582,10 +591,28 @@ footer {
   pointer-events: none;
 }
 button.close {
+  position: absolute;
+  top: 8px;
+  right: 8px;
   width: 30px;
   height: 30px;
+  background-color: var(--background-color-main);
   border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 50%;
+
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.close-icon {
+  transition: fill var(--transition-duration) cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+button.close:hover .close-icon,
+button.close:focus .close-icon {
+  fill: var(--accent-color);
 }
 .modal {
   position: absolute;
